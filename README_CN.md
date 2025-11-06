@@ -1,55 +1,52 @@
 <div align="center">
 
-# 🚀 AI-Trader: Which LLM Rules the Market?
+# 🚀 AI-Trader: Can AI Beat the Market?
 ### *让AI在金融市场中一展身手*
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Feishu](https://img.shields.io/badge/💬Feishu-Group-blue?style=flat)](./Communication.md) 
+[![WeChat](https://img.shields.io/badge/WeChat-Group-green?style=flat&logo=wechat)](./Communication.md)
 
 
-**一个AI股票交易代理系统，让多个大语言模型在纳斯达克100股票池中完全自主决策、同台竞技！**
+**一个AI股票交易代理系统，让多个大语言模型在纳斯达克100和上证50股票池中完全自主决策、同台竞技！**
 
-## 🏆 当前锦标赛排行榜 
-[*点击查看*](https://hkuds.github.io/AI-Trader/)
+## 🏆 当前锦标赛排行榜 🏆 
+[*点击查看: AI实时交易*](https://ai4trade.ai)
 
 <div align="center">
 
-### 🥇 **锦标赛期间：(Last Update 2025/10/29)**
-
-| 🏆 Rank | 🤖 AI Model | 📈 Total Earnings | 
-|---------|-------------|----------------|
-| **🥇 1st** | **DeepSeek** | 🚀 +16.46% |
-| 🥈 2nd | MiniMax-M2 | 📊 +12.03% |
-| 🥉 3rd | GPT-5 | 📊 +9.98% |
-| 4th | Claude-3.7 | 📊 +9.80% |
-| 5th | Qwen3-max | 📊 +7.96% |
-| Baseline | QQQ | 📊 +5.39% |
-| 6th | Gemini-2.5-flash | 📊 +0.48% |
-
-### 📊 **实时性能仪表板**
-![rank](assets/rank.png)
-
-*每日追踪AI模型在纳斯达克100交易中的表现*
-
-</div>
 
 ---
 
-## 📝 本周更新计划
+## **如何使用这个数据集**
 
-我们很高兴宣布以下更新将在本周内上线：
+很简单！
 
-- ⏰ **小时级别交易支持** - 升级至小时级精度交易
-- 🚀 **服务部署与并行执行** - 部署生产服务 + 并行模型执行
-- 🎨 **增强前端仪表板** - 添加详细的交易日志可视化（完整交易过程展示）
+你只需要提交一个pr，这个pr至少包含：`./agent/{你的策略}.py`（你可以继承Basemodel来创建你的策略！），`./configs/{yourconfig}`,如何运行你的策略的说明，只要我们能够运行，我们将在我们的平台上运行一周以上并持续更新你的战绩！
 
-敬请期待这些激动人心的改进！🎉
+## 🎉 本周更新
+
+我们很高兴宣布以下重大更新已于本周完成：
+
+### 📈 市场扩展
+- ✅ **A股市场支持** - 将交易能力扩展到中国A股市场，扩大全球市场覆盖范围。
+
+### ⏰ 增强交易能力
+- ✅ **小时级别交易支持** - 从日线级别升级到小时级别交易间隔，实现更精确、更及时的市场参与，具有精细的时间控制。
+
+### 🎨 用户体验改进
+- ✅ **实时交易仪表板** - 引入所有代理交易活动的实时可视化，提供全面的市场运营监督。
+
+- ✅ **代理推理显示** - 实现AI决策过程的完全透明，展示详细的推理链，显示每个交易决策是如何形成的。
+
+- ✅ **交互式排行榜** - 推出动态性能排名系统，实时更新，允许用户实时跟踪和比较代理性能。
 
 ---
 
 > 🎯 **核心特色**: 100% AI自主决策，零人工干预，纯工具驱动架构
 
-[🚀 快速开始](#-快速开始) • [📈 性能分析](#-性能分析) • [🛠️ 配置指南](#-配置指南)
+[🚀 快速开始](#-快速开始) • [📈 性能分析](#-性能分析) • [🛠️ 配置指南](#-配置指南) • [English Documentation](README.md)
 
 </div>
 
@@ -57,7 +54,7 @@
 
 ## 🌟 项目介绍
 
-> **AI-Trader让五个不同的AI模型，每个都采用独特的投资策略，在同一个市场中完全自主决策、竞争，看谁能在纳斯达克100交易中赚得最多！**
+> **AI-Trader让五个不同的AI模型，每个都采用独特的投资策略，在同一个市场中完全自主决策、竞争，看谁能在纳斯达克100或上证50交易中赚得最多！**
 
 ### 🎯 核心特性
 
@@ -74,10 +71,10 @@
 ---
 
 ### 🎮 交易环境
-每个AI模型以$10,000起始资金在受控环境中交易纳斯达克100股票，使用真实市场数据和历史回放功能。
+每个AI模型以$10,000或100,000¥起始资金在受控环境中交易纳斯达克100股票和上证50股票，使用真实市场数据和历史回放功能。
 
-- 💰 **初始资金**: $10,000美元起始余额
-- 📈 **交易范围**: 纳斯达克100成分股（100只顶级科技股）
+- 💰 **初始资金**: $10,000美元或100,000¥人民币起始余额
+- 📈 **交易范围**: 纳斯达克100成分股（100只顶级科技股）或上证50成分股
 - ⏰ **交易时间**: 工作日市场时间，支持历史模拟
 - 📊 **数据集成**: Alpha Vantage API结合Jina AI市场情报
 - 🔄 **时间管理**: 历史期间回放，自动过滤未来信息
@@ -97,7 +94,7 @@ AI代理完全自主运行，进行市场研究、制定交易决策，并在无
 ### 🏁 竞赛规则
 所有AI模型在相同条件下竞争，使用相同的资金、数据访问、工具和评估指标，确保公平比较。
 
-- 💰 **起始资金**: $10,000美元初始投资
+- 💰 **起始资金**: $10,000美元或100,000¥人民币初始投资
 - 📊 **数据访问**: 统一的市场数据和信息源
 - ⏰ **运行时间**: 同步的交易时间窗口
 - 📈 **性能指标**: 所有模型的标准评估标准
@@ -160,62 +157,126 @@ AI只能访问当前时间及之前的数据。不允许未来信息。
 ```
 AI-Trader Bench/
 ├── 🤖 核心系统
-│   ├── main.py    # 🎯 主程序入口
-│   ├── agent/base_agent/          # 🧠 AI代理核心
+│   ├── main.py                    # 🎯 主程序入口
+│   ├── agent/
+│   │   ├── base_agent/            # 🧠 通用AI交易代理（美股）
+│   │   │   ├── base_agent.py      # 基础代理类
+│   │   │   └── __init__.py
+│   │   └── base_agent_astock/     # 🇨🇳 A股专用交易代理
+│   │       ├── base_agent_astock.py  # A股代理类
+│   │       └── __init__.py
 │   └── configs/                   # ⚙️ 配置文件
 │
 ├── 🛠️ MCP工具链
 │   ├── agent_tools/
-│   │   ├── tool_trade.py          # 💰 交易执行
-│   │   ├── tool_get_price_local.py # 📊 价格查询
+│   │   ├── tool_trade.py          # 💰 交易执行（自动适配市场规则）
+│   │   ├── tool_get_price_local.py # 📊 价格查询（支持美股+A股）
 │   │   ├── tool_jina_search.py   # 🔍 信息搜索
-│   │   └── tool_math.py           # 🧮 数学计算
+│   │   ├── tool_math.py           # 🧮 数学计算
+│   │   └── start_mcp_services.py  # 🚀 MCP服务启动脚本
 │   └── tools/                     # 🔧 辅助工具
 │
 ├── 📊 数据系统
 │   ├── data/
-│   │   ├── daily_prices_*.json    # 📈 股票价格数据
-│   │   ├── merged.jsonl           # 🔄 统一数据格式
-│   │   └── agent_data/            # 📝 AI交易记录
+│   │   ├── daily_prices_*.json    # 📈 纳斯达克100股票价格数据
+│   │   ├── merged.jsonl           # 🔄 美股统一数据格式
+│   │   ├── get_daily_price.py     # 📥 美股数据获取脚本
+│   │   ├── merge_jsonl.py         # 🔄 美股数据格式转换
+│   │   ├── A_stock/               # 🇨🇳 A股市场数据
+│   │   │   ├── sse_50_weight.csv          # 📋 上证50成分股
+│   │   │   ├── daily_prices_sse_50.csv    # 📈 日线价格数据（CSV）
+│   │   │   ├── merged.jsonl               # 🔄 A股统一数据格式
+│   │   │   ├── index_daily_sse_50.json    # 📊 上证50指数基准数据
+│   │   │   ├── get_daily_price_a_stock.py # 📥 A股数据获取脚本
+│   │   │   └── merge_a_stock_jsonl.py     # 🔄 A股数据格式转换
+│   │   ├── agent_data/            # 📝 AI交易记录（纳斯达克100）
+│   │   └── agent_data_astock/     # 📝 A股AI交易记录
 │   └── calculate_performance.py   # 📈 性能分析
+│
+├── 💬 提示词系统
+│   └── prompts/
+│       ├── agent_prompt.py        # 🌐 通用交易提示词（美股）
+│       └── agent_prompt_astock.py # 🇨🇳 A股专用交易提示词
 │
 ├── 🎨 前端界面
 │   └── frontend/                  # 🌐 Web仪表板
 │
-└── 📋 配置与文档
-    ├── configs/                   # ⚙️ 系统配置
-    ├── prompts/                   # 💬 AI提示词
-    └── calc_perf.sh              # 🚀 性能计算脚本
+├── 📋 配置与文档
+│   ├── configs/                   # ⚙️ 系统配置
+│   │   ├── default_config.json    # 美股默认配置
+│   │   └── astock_config.json     # A股配置示例
+│   └── calc_perf.sh              # 🚀 性能计算脚本
+│
+└── 🚀 快速启动脚本
+    └── scripts/                   # 🛠️ 便捷启动脚本
+        ├── main.sh                # 一键完整流程（美股）
+        ├── main_step1.sh          # 美股：数据准备
+        ├── main_step2.sh          # 美股：启动MCP服务
+        ├── main_step3.sh          # 美股：运行交易代理
+        ├── main_a_stock_step1.sh  # A股：数据准备
+        ├── main_a_stock_step2.sh  # A股：启动MCP服务
+        ├── main_a_stock_step3.sh  # A股：运行交易代理
+        └── start_ui.sh            # 启动Web界面
 ```
 
 ### 🔧 核心组件详解
 
 #### 🎯 主程序 (`main.py`)
 - **多模型并发**: 同时运行多个AI模型进行交易
+- **动态代理加载**: 基于配置文件自动加载对应的代理类型
 - **配置管理**: 支持JSON配置文件和环境变量
 - **日期管理**: 灵活的交易日历和日期范围设置
 - **错误处理**: 完善的异常处理和重试机制
 
+#### 🤖 AI代理系统
+| 代理类型 | 模块路径 | 适用场景 | 特性 |
+|---------|---------|---------|------|
+| **BaseAgent** | `agent.base_agent` | 美股/A股通用 | 灵活的市场切换，可配置股票池 |
+| **BaseAgentAStock** | `agent.base_agent_astock` | A股专用 | 内置A股规则，上证50默认池，中文提示词 |
+
+**架构优势**：
+- 🔄 **清晰分离**: 美股和A股代理独立维护，互不干扰
+- 🎯 **专用优化**: A股代理针对中国市场特性深度优化
+- 🔌 **易于扩展**: 支持添加更多市场专用代理（如港股、加密货币等）
+
 #### 🛠️ MCP工具链
-| 工具 | 功能 | API |
-|------|------|-----|
-| **交易工具** | 买入/卖出股票，持仓管理 | `buy()`, `sell()` |
-| **价格工具** | 实时和历史价格查询 | `get_price_local()` |
-| **搜索工具** | 市场信息搜索 | `get_information()` |
-| **数学工具** | 财务计算和分析 | 基础数学运算 |
+| 工具 | 功能 | 市场支持 | API |
+|------|------|---------|-----|
+| **交易工具** | 买入/卖出股票，持仓管理 | 🇺🇸 美股 / 🇨🇳 A股 | `buy()`, `sell()` |
+| **价格工具** | 实时和历史价格查询 | 🇺🇸 美股 / 🇨🇳 A股 | `get_price_local()` |
+| **搜索工具** | 市场信息搜索 | 全球市场 | `get_information()` |
+| **数学工具** | 财务计算和分析 | 通用 | 基础数学运算 |
+
+**工具特性**：
+- 🔍 **自动识别**: 根据股票代码后缀（.SH/.SZ）自动选择数据源
+- 📏 **规则适配**: 自动应用对应市场的交易规则（T+0/T+1，手数限制等）
+- 🌐 **统一接口**: 相同的API接口支持多市场交易
 
 #### 📊 数据系统
-- **📈 价格数据**: 纳斯达克100成分股的完整OHLCV数据
-- **📝 交易记录**: 每个AI模型的详细交易历史
-- **📊 性能指标**: 夏普比率、最大回撤、年化收益等
-- **🔄 数据同步**: 自动化的数据获取和更新机制
+- **📈 价格数据**: 
+  - 🇺🇸 纳斯达克100成分股的完整OHLCV数据（Alpha Vantage）
+  - 🇨🇳 A股市场数据（上证50指数）通过Tushare API
+  - 📁 统一JSONL格式，便于高效读取
+- **📝 交易记录**: 
+  - 每个AI模型的详细交易历史
+  - 分市场存储：`agent_data/`（美股）、`agent_data_astock/`（A股）
+- **📊 性能指标**: 
+  - 夏普比率、最大回撤、年化收益等
+  - 支持多市场性能对比分析
+- **🔄 数据同步**: 
+  - 自动化的数据获取和更新机制
+  - 独立的数据获取脚本，支持增量更新
 
 ## 🚀 快速开始
 
 ### 📋 前置要求
 
 - **Python 3.10+** 
-- **API密钥**: OpenAI、Alpha Vantage、Jina AI
+- **API密钥**: 
+  - OpenAI（用于AI模型）
+  - Alpha Vantage（用于纳斯达克100数据）
+  - Jina AI（用于市场信息搜索）
+  - Tushare（用于A股市场数据，可选）
 
 
 ### ⚡ 一键安装
@@ -243,8 +304,9 @@ OPENAI_API_BASE=https://your-openai-proxy.com/v1
 OPENAI_API_KEY=your_openai_key
 
 # 📊 数据源配置
-ALPHAADVANTAGE_API_KEY=your_alpha_vantage_key
+ALPHAADVANTAGE_API_KEY=your_alpha_vantage_key  # 用于纳斯达克100数据
 JINA_API_KEY=your_jina_api_key
+TUSHARE_TOKEN=your_tushare_token               # 用于A股数据
 
 # ⚙️ 系统配置
 RUNTIME_ENV_PATH=./runtime_env.json #推荐使用绝对路径
@@ -265,13 +327,50 @@ AGENT_MAX_STEP=30             # 最大推理步数
 pip install -r requirements.txt
 
 # 或手动安装核心依赖
-pip install langchain langchain-openai langchain-mcp-adapters fastmcp python-dotenv requests numpy pandas
+pip install langchain langchain-openai langchain-mcp-adapters fastmcp python-dotenv requests numpy pandas tushare
 ```
 
 ## 🎮 运行指南
 
-### 📊 步骤1: 数据准备 (`./fresh_data.sh`)
+### 🚀 使用脚本快速启动
 
+我们在 `scripts/` 目录中提供了便捷的启动脚本：
+
+#### 🇺🇸 美股市场（纳斯达克100）
+```bash
+# 一键启动（完整流程）
+bash scripts/main.sh
+
+# 或分步运行：
+bash scripts/main_step1.sh  # 步骤1: 准备数据
+bash scripts/main_step2.sh  # 步骤2: 启动MCP服务
+bash scripts/main_step3.sh  # 步骤3: 运行交易代理
+```
+
+#### 🇨🇳 A股市场（上证50）
+```bash
+# 分步运行：
+bash scripts/main_a_stock_step1.sh  # 步骤1: 准备A股数据
+bash scripts/main_a_stock_step2.sh  # 步骤2: 启动MCP服务
+bash scripts/main_a_stock_step3.sh  # 步骤3: 运行A股交易代理
+```
+
+#### 🌐 Web界面
+```bash
+# 启动Web界面
+bash scripts/start_ui.sh
+# 访问: http://localhost:8888
+```
+
+---
+
+### 📋 手动运行指南
+
+如果您更喜欢手动执行命令，请按照以下步骤操作：
+
+### 📊 步骤1: 数据准备
+
+#### 🇺🇸 纳斯达克100数据
 
 ```bash
 # 📈 获取纳斯达克100股票数据
@@ -280,6 +379,19 @@ python get_daily_price.py
 
 # 🔄 合并数据为统一格式
 python merge_jsonl.py
+```
+
+#### 🇨🇳 A股市场数据（上证50）
+
+```bash
+# 📈 获取中国A股市场数据（上证50指数）
+cd data/A_stock
+python get_daily_price_a_stock.py
+
+# 🔄 转换为JSONL格式（交易系统必需）
+python merge_a_stock_jsonl.py
+
+# 📊 数据将保存至: data/A_stock/merged.jsonl
 ```
 
 ### 🛠️ 步骤2: 启动MCP服务
@@ -291,20 +403,28 @@ python start_mcp_services.py
 
 ### 🚀 步骤3: 启动AI竞技场
 
+#### 美股交易（纳斯达克100）：
 ```bash
-# 🎯 运行主程序 - 让AI们开始交易！
+# 🎯 使用默认配置运行
 python main.py
 
-# 🎯 或使用自定义配置
-python main.py configs/my_config.json
+# 🎯 或指定美股配置
+python main.py configs/default_config.json
+```
+
+#### A股交易（上证50）：
+```bash
+# 🎯 运行A股交易
+python main.py configs/astock_config.json
 ```
 
 ### ⏰ 时间设置示例
 
-#### 📅 创建自定义时间配置
+#### 📅 美股配置示例 (使用 BaseAgent)
 ```json
 {
   "agent_type": "BaseAgent",
+  "market": "us",              // 市场类型："us" 美股
   "date_range": {
     "init_date": "2024-01-01",  // 回测开始日期
     "end_date": "2024-03-31"     // 回测结束日期
@@ -316,9 +436,37 @@ python main.py configs/my_config.json
       "signature": "claude-3.7-sonnet",
       "enabled": true
     }
-  ]
+  ],
+  "agent_config": {
+    "initial_cash": 10000.0    // 初始资金：$10,000美元
+  }
 }
 ```
+
+#### 📅 A股配置示例 (使用 BaseAgentAStock)
+```json
+{
+  "agent_type": "BaseAgentAStock",  // A股专用代理
+  "market": "cn",                   // 市场类型："cn" A股（可选，会被忽略，始终使用cn）
+  "date_range": {
+    "init_date": "2025-10-09",      // 回测开始日期
+    "end_date": "2025-10-31"         // 回测结束日期
+  },
+  "models": [
+    {
+      "name": "claude-3.7-sonnet",
+      "basemodel": "anthropic/claude-3.7-sonnet",
+      "signature": "claude-3.7-sonnet",
+      "enabled": true
+    }
+  ],
+  "agent_config": {
+    "initial_cash": 100000.0        // 初始资金：¥100,000人民币
+  }
+}
+```
+
+> 💡 **提示**: 使用 `BaseAgentAStock` 时，`market` 参数会被自动设置为 `"cn"`，无需手动指定。
 
 ### 📈 启动Web界面
 
@@ -328,18 +476,27 @@ python3 -m http.server 8000
 # 访问 http://localhost:8000
 ```
 
+或者使用启动脚本：
+
+```bash
+# 启动Web界面
+bash scripts/start_ui.sh
+# 访问: http://localhost:8888
+```
+
 
 ## 📈 性能分析
 
 ### 🏆 竞技规则
 
-| 规则项 | 设置 | 说明 |
-|--------|------|------|
-| **💰 初始资金** | $10,000 | 每个AI模型起始资金 |
-| **📈 交易标的** | 纳斯达克100 | 100只顶级科技股 |
-| **⏰ 交易时间** | 工作日 | 周一至周五 |
-| **💲 价格基准** | 开盘价 | 使用当日开盘价交易 |
-| **📝 记录方式** | JSONL格式 | 完整交易历史记录 |
+| 规则项 | 美股 | A股（中国） |
+|--------|------|------------|
+| **💰 初始资金** | $10,000 | ¥100,000 |
+| **📈 交易标的** | 纳斯达克100 | 上证50 |
+| **🌍 市场** | 美国股市 | 中国A股市场 |
+| **⏰ 交易时间** | 工作日 | 工作日 |
+| **💲 价格基准** | 开盘价 | 开盘价 |
+| **📝 记录方式** | JSONL格式 | JSONL格式 |
 
 ## ⚙️ 配置指南
 
@@ -348,6 +505,7 @@ python3 -m http.server 8000
 ```json
 {
   "agent_type": "BaseAgent",
+  "market": "us",
   "date_range": {
     "init_date": "2025-01-01",
     "end_date": "2025-01-31"
@@ -374,13 +532,21 @@ python3 -m http.server 8000
 
 ### 🔧 配置参数说明
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| `agent_type` | AI代理类型 | "BaseAgent" |
-| `max_steps` | 最大推理步数 | 30 |
-| `max_retries` | 最大重试次数 | 3 |
-| `base_delay` | 操作延迟(秒) | 1.0 |
-| `initial_cash` | 初始资金 | $10,000 |
+| 参数 | 说明 | 可选值 | 默认值 |
+|------|------|--------|--------|
+| `agent_type` | AI代理类型 | "BaseAgent"（通用）<br>"BaseAgentAStock"（A股专用） | "BaseAgent" |
+| `market` | 市场类型 | "us"（美股）<br>"cn"（A股）<br>注：使用BaseAgentAStock时自动设为"cn" | "us" |
+| `max_steps` | 最大推理步数 | 正整数 | 30 |
+| `max_retries` | 最大重试次数 | 正整数 | 3 |
+| `base_delay` | 操作延迟(秒) | 浮点数 | 1.0 |
+| `initial_cash` | 初始资金 | 浮点数 | $10,000（美股）<br>¥100,000（A股） |
+
+#### 📋 代理类型说明
+
+| 代理类型 | 适用市场 | 特点 |
+|---------|---------|------|
+| **BaseAgent** | 美股 / A股 | • 通用交易代理<br>• 通过 `market` 参数切换市场<br>• 灵活配置股票池 |
+| **BaseAgentAStock** | A股专用 | • 专为A股优化的代理<br>• 内置A股交易规则（一手100股、T+1）<br>• 默认上证50股票池<br>• 人民币计价 |
 
 ### 📊 数据格式
 
@@ -460,7 +626,11 @@ AGENT_REGISTRY = {
         "module": "agent.base_agent.base_agent",
         "class": "BaseAgent"
     },
-    "CustomAgent": {  # 新增
+    "BaseAgentAStock": {
+        "module": "agent.base_agent_astock.base_agent_astock",
+        "class": "BaseAgentAStock"
+    },
+    "CustomAgent": {  # 新增自定义代理
         "module": "agent.custom.custom_agent",
         "class": "CustomAgent"
     },
@@ -500,7 +670,7 @@ class CustomTool:
 ## 🚀 路线图
 
 ### 🌟 未来计划
-- [ ] **🇨🇳 A股支持** - 扩展至中国股市
+- [x] **🇨🇳 A股支持** - ✅ 上证50指数数据集成已完成
 - [ ] **📊 收盘后统计** - 自动收益分析
 - [ ] **🔌 策略市场** - 添加第三方策略分享平台
 - [ ] **🎨 炫酷前端界面** - 现代化Web仪表板
@@ -509,44 +679,6 @@ class CustomTool:
 - [ ] **⏰ 高级回放** - 支持分钟级时间精度和实时回放
 - [ ] **🔍 智能过滤** - 更精确的未来信息检测和过滤
 
-## 🤝 贡献指南
-
-我们欢迎各种形式的贡献！特别是AI交易策略和代理实现。
-
-### 🧠 AI策略贡献
-- **🎯 交易策略**: 贡献你的AI交易策略实现
-- **🤖 自定义代理**: 实现新的AI代理类型
-- **📊 分析工具**: 添加新的市场分析工具
-- **🔍 数据源**: 集成新的数据源和API
-
-### 🐛 问题报告
-- 使用GitHub Issues报告bug
-- 提供详细的复现步骤
-- 包含系统环境信息
-
-### 💡 功能建议
-- 在Issues中提出新功能想法
-- 详细描述使用场景
-- 讨论实现方案
-
-### 🔧 代码贡献
-1. Fork项目
-2. 创建功能分支
-3. 实现你的策略或功能
-4. 添加测试用例
-5. 创建Pull Request
-
-### 📚 文档改进
-- 完善README文档
-- 添加代码注释
-- 编写使用教程
-- 贡献策略说明文档
-
-### 🏆 策略分享
-- **📈 技术分析策略**: 基于技术指标的AI策略
-- **📊 量化策略**: 多因子模型和量化分析
-- **🔍 基本面策略**: 基于财务数据的分析策略
-- **🌐 宏观策略**: 基于宏观经济数据的策略
 
 ## 📞 支持与社区
 
@@ -562,8 +694,40 @@ class CustomTool:
 感谢以下开源项目和服务：
 - [LangChain](https://github.com/langchain-ai/langchain) - AI应用开发框架
 - [MCP](https://github.com/modelcontextprotocol) - Model Context Protocol
-- [Alpha Vantage](https://www.alphavantage.co/) - 金融数据API
+- [Alpha Vantage](https://www.alphavantage.co/) - 美股金融数据API
+- [Tushare](https://tushare.pro/) - A股市场数据API
 - [Jina AI](https://jina.ai/) - 信息搜索服务
+
+## 👥 管理员
+
+<div align="center">
+
+<a href="https://github.com/TianyuFan0504">
+  <img src="https://avatars.githubusercontent.com/TianyuFan0504?v=4" width="80" height="80" alt="TianyuFan0504" style="border-radius: 50%; margin: 5px;"/>
+</a>
+<a href="https://github.com/yangqin-jiang">
+  <img src="https://avatars.githubusercontent.com/yangqin-jiang?v=4" width="80" height="80" alt="yangqin-jiang" style="border-radius: 50%; margin: 5px;"/>
+</a>
+<a href="https://github.com/yuh-yang">
+  <img src="https://avatars.githubusercontent.com/yuh-yang?v=4" width="80" height="80" alt="yuh-yang" style="border-radius: 50%; margin: 5px;"/>
+</a>
+<a href="https://github.com/Hoder-zyf">
+  <img src="https://avatars.githubusercontent.com/Hoder-zyf?v=4" width="80" height="80" alt="Hoder-zyf" style="border-radius: 50%; margin: 5px;"/>
+</a>
+
+</div>
+
+## 🤝 贡献
+
+<div align="center">
+  我们感谢所有贡献者的宝贵贡献。
+</div>
+
+<div align="center">
+  <a href="https://github.com/HKUDS/AI-Trader/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=HKUDS/AI-Trader" style="border-radius: 15px; box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);" />
+  </a>
+</div>
 
 ## 免责声明
 
@@ -582,3 +746,26 @@ AI-Trader项目所提供的资料仅供研究之用，并不构成任何投资�
 **🛠️ 纯工具驱动，零人工干预，真正的AI交易竞技场！** 🚀
 
 </div>
+
+---
+
+## ⭐ Star 历史
+
+*社区增长轨迹*
+
+<div align="center">
+  <a href="https://star-history.com/#HKUDS/AI-Trader&Date">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HKUDS/AI-Trader&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HKUDS/AI-Trader&type=Date" />
+      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HKUDS/AI-Trader&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
+    </picture>
+  </a>
+</div>
+
+---
+
+<p align="center">
+  <em> ❤️ 感谢访问 ✨ AI-Trader!</em><br><br>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=HKUDS.AI-Trader&style=for-the-badge&color=00d4ff" alt="Views">
+</p>
