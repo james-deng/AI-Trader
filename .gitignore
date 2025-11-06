@@ -67,6 +67,7 @@ data/agent_data/test*/
 data/agent_data/*test*/
 data/merged_daily.jsonl
 data/merged_hour.jsonl
+data/merged.jsonl
 data/daily*.json
 
 # Jupyter Notebook
